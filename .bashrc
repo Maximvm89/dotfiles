@@ -15,16 +15,14 @@ PS1=['\[\e[38;5;27m\]\h\[\e[0m\]@\[\e[37;2m\]\t\[\e[0m\] \[\e[3m\]\W\[\e[0m\] \[
 alias ws="cd /net/code/workspaces/mparisi/git"
 alias sshvfx="ssh sys2261.ldn.vfx -t bash"
 
-export PATH="/net/code/workspaces/mparisi/git/lazygit:/net/code/workspaces/mparisi/git/delta/usr/bin/:/net/code/workspaces/mparisi/git/bat:$PATH"
+export PATH="/net/code/workspaces/mparisi/git/lazygit:$PATH"
 export PATH="/net/code/workspaces/mparisi/git/nvim-el7/bin:$PATH"
 export PATH="/net/code/workspaces/mparisi/git/ripgrep:$PATH"
 export NVM_DIR="$HOME/.nvm"
-#
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 [ -f ~/.fzf.bash ] && source /net/code/workspaces/mparisi/git/.fzf.bash
 . "/net/code/workspaces/mparisi/git/.cargo/env"
-export PATH="/net/code/workspaces/mparisi/git/.cargo/bin:$PATH"
 
 eval "$(zoxide init bash)"
+
+alias ls="eza --color=always --long --git --no-filesize --icons=always"
