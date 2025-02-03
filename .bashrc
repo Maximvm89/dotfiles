@@ -20,7 +20,7 @@ export PATH="/net/code/workspaces/mparisi/git/nvim-el7/bin:$PATH"
 export PATH="/net/code/workspaces/mparisi/git/ripgrep:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
-[ -f ~/.fzf.bash ] && source /net/code/workspaces/mparisi/git/.fzf.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "/net/code/workspaces/mparisi/git/.cargo/env"
 
 eval "$(zoxide init bash)"
