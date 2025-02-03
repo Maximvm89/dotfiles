@@ -26,3 +26,4 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(zoxide init bash)"
 
 alias ls="eza --color=always --long --git --no-filesize --icons=always --all"
+. "$HOME/.cargo/env"
