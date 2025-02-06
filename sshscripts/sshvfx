@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+ssh -tY mparisi@sys2261.ldn.vfx 'bash -c "cd /job; exec bash"'
