@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh -tY sys-vm0065.ldn 'bash -c "cd /net/code/workspaces/mparisi/git;exec nvim"'

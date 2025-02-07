@@ -1,6 +1,21 @@
 layout {
 
-  tab name="develop" {
+  tab name="LDN-SHARED-EL9-NVIM" {
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+    pane split_direction="vertical" {
+      pane {
+        command "~/sshsharedel9_nvim"
+        name "el9 DEVELOP"
+      }
+    }
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  tab name="LDN-SHARED-EL9" {
     pane size=1 borderless=true {
       plugin location="zellij:compact-bar"
     }
@@ -9,41 +24,80 @@ layout {
         command "~/sshsharedel9"
         name "el9 DEVELOP"
       }
-      pane {
-          name "el7 svfx"
-          command "~/sshvfx"
-          start_suspended true
-      }
     }
     pane size=2 borderless=true {
       plugin location="zellij:status-bar"
     }
   }
 
-  tab name="MTL-MUM-MEL" {
-    pane size=1 borderless=true {
-      plugin location="zellij:compact-bar"
-    }
-    pane split_direction="vertical" {
-      pane {
-        command "~/sshvfxmtl"
-        name "MTL"
-        start_suspended true
+  tab name="LDN-VFX-EL7" {
+      pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
       }
       pane {
-        command "~/sshvfxmel"
-        name "MEL"
-        start_suspended true
-      }
-      pane {
-        command "~/sshvfxmum"
-        name "MUM"
-        start_suspended true
-      }
-    }
- 
-    pane size=2 borderless=true {
+          command "~/sshvfxel7"
+          name "LDNVFX-EL7"
+          start_suspended true
+        }
+     pane size=2 borderless=true {
       plugin location="zellij:status-bar"
     }
   }
+
+  tab name="LDN-VFX-EL9" {
+      pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
+      }
+      pane {
+          command "~/sshvfxel9"
+          name "LDNVFX-EL9"
+          start_suspended true
+        }
+     pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  tab name="MTL-VFX-EL7" {
+      pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
+      }
+      pane {
+          command "~/sshvfxmtl"
+          name "LDNMTL"
+          start_suspended true
+        }
+     pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  tab name="MEL-VFX-EL7" {
+      pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
+      }
+      pane {
+          command "~/sshvfxmel"
+          name "LDNMEL"
+          start_suspended true
+        }
+     pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  tab name="MUM-VFX-EL7" {
+      pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
+      }
+      pane {
+          command "~/sshvfxmel"
+          name "LDNMUM"
+          start_suspended true
+        }
+     pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
 }

@@ -309,13 +309,13 @@ load_plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-// theme "default"
+theme "catppuccin-macchiato"
 
 // The name of the default layout to load on startup
 // Default: "default"
 // (Requires restart)
 //
-// default_layout "compact"
+default_layout "/home/marco/.config/zellij/fs-basic.kdl"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
@@ -386,7 +386,7 @@ layout_dir "~/.config/zellij/layouts"
 // The folder in which Zellij will look for themes
 // (Requires restart)
 //
-// theme_dir "/path/to/my/theme_dir"
+//theme_dir "/home/marco/.config/zellij"
 
 // Enable or disable the rendering of styled and colored underlines (undercurl).
 // May need to be disabled for certain unsupported terminals
