@@ -15,8 +15,10 @@ PS1=['\[\e[38;5;27m\]\h\[\e[0m\]@\[\e[37;2m\]\t\[\e[0m\] \[\e[3m\]\W\[\e[0m\] \[
 alias ws="cd /net/code/workspaces/mparisi/git"
 alias sshvfx="ssh sys2261.ldn.vfx -t bash"
 
+alias sync_pvim="rsync -av --delete /net/code/workspaces/mparisi/git/pvim/ ~/pvim/"
+alias nvim="~/pvim/pvim"
+
 export PATH="/net/code/workspaces/mparisi/git/lazygit:$PATH"
-export PATH="/net/code/workspaces/mparisi/git/nvim-el7/bin:$PATH"
 export PATH="/net/code/workspaces/mparisi/git/ripgrep:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
