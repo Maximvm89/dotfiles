@@ -16,7 +16,13 @@ alias ws="cd /net/code/workspaces/mparisi/git"
 alias sshvfx="ssh sys2261.ldn.vfx -t bash"
 
 alias sync_pvim="rsync -av --delete /net/code/workspaces/mparisi/git/pvim/ ~/pvim/"
-alias nvim="~/pvim/pvim"
+
+[[ $(</etc/os-release) == *PLATFORM_ID=*:el9* ]] 2>/dev/null && el9=1 || el7=1
+if [[ "${el7-}" ]]; then
+  APPIMAGE_ADDENDUM="-i /net/code/workspaces/mparisi/git/nvim_appimage/nvim.appimage"
+fi
+
+alias nvim='~/pvim/pvim "${APPIMAGE_ADDENDUM-}"'
 
 export PATH="/net/code/workspaces/mparisi/git/lazygit:$PATH"
 export PATH="/net/code/workspaces/mparisi/git/ripgrep:$PATH"
