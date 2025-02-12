@@ -1,3 +1,4 @@
 #!/bin/bash
 
-ssh -tY sys-vm0065.ldn 'bash -c "cd /net/code/workspaces/mparisi/git;exec bash && nvim"'
+# ssh -tY sys-vm0065.ldn 'bash -c "cd /net/code/workspaces/mparisi/git; bash -c pvim"'
+ssh -tY sys-vm0065.ldn 'tmux attach-session -t pvim || tmux new-session -s pvim "cd /net/code/workspaces/mparisi/git && /net/code/workspaces/mparisi/git/pvim/pvim"'

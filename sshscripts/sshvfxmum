@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-ssh -tY mparisi@hotel.mum.vfx 'bash -c "cd /job; exec bash"'
+ssh -tY mparisi@hotel.mum.vfx 'tmux attach-session -t bash || tmux new-session -s bash -c /net/code/workspaces/mparisi/git "bash"'

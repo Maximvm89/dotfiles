@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-ssh -tY mparisi@hotel.mel.vfx 'bash -c "cd /job; exec bash"'
+ssh -tY mparisi@hotel.mel.vfx "bash"
