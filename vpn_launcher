@@ -3,4 +3,4 @@
 2fa -clip fs
 
 # Create auth.txt file
-exec sudo openvpn --config ~/Downloads/mparisi-VPNCD/framestore-ldnvpn.ovpn --auth-user-pass ~/auth.txt
+exec sudo openvpn --config ~/Downloads/mparisi-VPNCD/framestore-ldnvpn.ovpn --auth-user-pass ~/auth.txt -d
