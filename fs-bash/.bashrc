@@ -40,14 +40,14 @@ alias sync_pvim="rsync -av --delete /net/code/workspaces/mparisi/git/pvim/ ~/pvi
 
 alias nvim='/net/code/workspaces/mparisi/git/nvim_appimage/nvim.appimage'
 
+export PATH="/net/code/workspaces/mparisi/git/.cargo/bin:$PATH"
 export PATH="/net/code/workspaces/mparisi/git/lazygit:$PATH"
 export PATH="/net/code/workspaces/mparisi/git/ripgrep:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "/net/code/workspaces/mparisi/git/.cargo/env"
 
 eval "$(zoxide init bash)"
 
-alias ls="eza --color=always --long --git --no-filesize --icons=always --all"
+alias ll="eza --color=always --long --git --no-filesize --icons=always --all"
 . "$HOME/.cargo/env"
