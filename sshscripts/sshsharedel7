@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-ssh -tY mparisi@sys-vm0019.ldn 'tmux attach-session -t bash || tmux new-session -s test'
+ssh -tY mparisi@sys-vm0019.ldn 'bash'

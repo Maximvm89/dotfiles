@@ -7,6 +7,8 @@ export SUDO_EDITOR="$EDITOR"
 
 export PATH=$PATH:/usr/local/go/bin:${HOME}/go/bin:
 
+bindkey "\e[3~" delete-char
+
 HISTFILE=~/.history
 HISTSIZE=10000
 SAVEHIST=50000
