@@ -45,7 +45,7 @@ export PATH="/net/code/workspaces/mparisi/git/lazygit:$PATH"
 export PATH="/net/code/workspaces/mparisi/git/ripgrep:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f /net/code/workspaces/mparisi/git/.fzf.bash ] && source /net/code/workspaces/mparisi/git/.fzf.bash
 
 eval "$(zoxide init bash)"
 
