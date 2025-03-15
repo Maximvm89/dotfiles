@@ -38,12 +38,11 @@ alias sshvfx="ssh sys2261.ldn.vfx -t bash"
 
 alias sync_pvim="rsync -av --delete /net/code/workspaces/mparisi/git/pvim/ ~/pvim/"
 
-alias nvim='/net/code/workspaces/mparisi/git/nvim_appimage/nvim.appimage'
+alias nvim='/net/code/workspaces/mparisi/envdev/nvim_appimage/nvim.appimage'
 
-export PATH="/net/code/workspaces/mparisi/git/fzf/bin:$PATH"
-export PATH="/net/code/workspaces/mparisi/git/.cargo/bin:$PATH"
-export PATH="/net/code/workspaces/mparisi/git/lazygit:$PATH"
-export PATH="/net/code/workspaces/mparisi/git/ripgrep:$PATH"
+export PATH="/net/code/workspaces/mparisi/envdev/.cargo/bin:$PATH"
+export PATH="/net/code/workspaces/mparisi/envdev/lazygit:$PATH"
+export PATH="/net/code/workspaces/mparisi/envdev/ripgrep:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
 [ -f /net/code/workspaces/mparisi/git/.fzf.bash ] && source /net/code/workspaces/mparisi/git/.fzf.bash
