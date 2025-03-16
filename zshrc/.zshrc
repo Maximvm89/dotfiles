@@ -24,7 +24,7 @@ function y() {
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-alias ls="eza --color=always --long --git --no-filesize --icons=always --all"
+alias ls="eza --color=always --long --git --icons=always --all"
 alias ll="ls -la"
 
 alias nfs="zellij delete-all-sessions; zellij --session Framestore"

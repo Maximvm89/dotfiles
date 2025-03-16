@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # ssh -tY sys-vm0065.ldn 'bash -c "cd /net/code/workspaces/mparisi/git; bash -c pvim"'
-ssh -tY sys-vm0065.ldn "cd /net/code/workspaces/mparisi/git && /net/code/workspaces/mparisi/git/nvim_appimage/nvim.appimage"
+ssh -tY sys-vm0065.ldn "cd /net/code/workspaces/mparisi/git && /net/code/workspaces/mparisi/envdev/nvim_appimage/nvim.appimage"
