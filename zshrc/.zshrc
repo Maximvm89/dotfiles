@@ -30,7 +30,6 @@ alias ll="ls -la"
 alias nfs="zellij delete-all-sessions; zellij --session Framestore"
 alias fs="zellij attach Framestore"
 alias vpn="~/vpn_launcher"
-alias cd='z'
 
 alias sshshared="ssh -Y sys-vm0065.ldn"
 alias sshsharedel7="ssh -Y sys-vm0019.ldn"
