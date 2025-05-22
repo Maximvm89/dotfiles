@@ -36,17 +36,23 @@ PS1=['\[\e[38;5;27m\]\h\[\e[0m\]@\[\e[37;2m\]\t\[\e[0m\] \[\e[3m\]\W\[\e[0m\] \[
 alias ws="cd /net/code/workspaces/mparisi/git"
 alias sshvfx="ssh sys2261.ldn.vfx -t bash"
 
-alias sync_pvim="rsync -av --delete /net/code/workspaces/mparisi/envdev/pvim/ ~/pvim/"
+# alias sync_pvim="rsync -av --delete /net/code/workspaces/mparisi/envdev/pvim/ ~/pvim/"
 
-alias nvim='/net/code/workspaces/mparisi/envdev/nvim_appimage/nvim.appimage'
+# alias nvim='/net/code/workspaces/mparisi/envdev/nvim_appimage/nvim.appimage'
 
 export PATH="/net/code/workspaces/mparisi/envdev/.cargo/bin:$PATH"
 export PATH="/net/code/workspaces/mparisi/envdev/lazygit:$PATH"
 export PATH="/net/code/workspaces/mparisi/envdev/ripgrep:$PATH"
 export PATH="/net/code/workspaces/mparisi/envdev/fzf/bin:$PATH"
+export PATH="/net/code/workspaces/mparisi/envdev/nvim_appimage:$PATH"
 export NVM_DIR="$HOME/.nvm"
+
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 [ -f /net/code/workspaces/mparisi/envdev/.fzf.bash ] && source /net/code/workspaces/mparisi/envdev/.fzf.bash
 
 eval "$(zoxide init bash)"
 
+
+. "$HOME/.local/bin/env"
