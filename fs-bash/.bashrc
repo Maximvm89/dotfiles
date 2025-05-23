@@ -48,7 +48,6 @@ export PATH="/net/code/workspaces/mparisi/envdev/nvim_appimage:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
 export XDG_DATA_HOME="/net/code/workspaces/mparisi/envdev/nvim_appimage/data"
-export XDG_STATE_HOME="/net/code/workspaces/mparisi/envdev/nvim_appimage/state"
 
 export EDITOR="nvim"
 export VISUAL="nvim"
