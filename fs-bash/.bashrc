@@ -53,8 +53,3 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 [ -f /net/code/workspaces/mparisi/envdev/.fzf.bash ] && source /net/code/workspaces/mparisi/envdev/.fzf.bash
-
-eval "$(zoxide init bash)"
-
-
-# . "$HOME/.local/bin/env"
