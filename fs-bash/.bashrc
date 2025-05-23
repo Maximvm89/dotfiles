@@ -57,4 +57,4 @@ export VISUAL="nvim"
 eval "$(zoxide init bash)"
 
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"
