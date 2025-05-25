@@ -1,0 +1,9 @@
+{
+  "aerial.nvim": { "branch": "master", "commit": "2e00d1d4248f08dddfceacb8d2996e51e13e00f6" },
+  "catppuccin": { "branch": "main", "commit": "be1e5e6308bb9d016bf5c1565e0f1d5e46400d7a" },
+  "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "lualine.nvim": { "branch": "master", "commit": "0c6cca9f2c63dadeb9225c45bc92bb95a151d4af" },
+  "mini.statusline": { "branch": "main", "commit": "e331175f10d9f400b42523b3890841aba202ce16" },
+  "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
+  "nvim-web-devicons": { "branch": "master", "commit": "1fb58cca9aebbc4fd32b086cb413548ce132c127" }
+}
