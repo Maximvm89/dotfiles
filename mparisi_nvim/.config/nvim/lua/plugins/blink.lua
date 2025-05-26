@@ -50,7 +50,7 @@ return {
 			-- Default list of enabled providers defined so that you can extend it
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			sources = {
-				default = { "lsp", "path", "snippets", "buffer" },
+				default = { "path", "lsp",  "snippets", "buffer" },
 			},
 
 			-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
@@ -59,11 +59,11 @@ return {
 			--
 			-- See the fuzzy documentation for more information
 			fuzzy = {
-				sorts = {
-					"exact",
-					"kind",
-					"label",
-				},
+				-- sorts = {
+				-- 	"exact",
+				-- 	"kind",
+				-- 	"label",
+				-- },
 				implementation = "prefer_rust_with_warning",
 			},
 		},

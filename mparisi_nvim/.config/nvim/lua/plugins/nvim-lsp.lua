@@ -204,11 +204,34 @@ return {
 		--  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
 		--  - settings (table): Override the default settings passed when initializing the server.
 		--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+		local util = require'lspconfig/util'
 		local servers = {
 			-- clangd = {},
 			-- gopls = {},
 			bashls = {},
-			pyright = {},
+			pyright = {
+				-- root_markers = { "pyrightconfig.json", ".git"},
+				root_dir = function (fname)
+					local root_files = {
+						'pyproject.toml',
+						'setup.py',
+						'setup.cfg',
+						'requirements.txt',
+						'Pipfile',
+						'pyrightconfig.json',
+					}
+					return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname) or util.path.dirname(fname)
+				end,
+				settings = {
+					python = {
+						analysis = {
+							autoSearchPaths = false,
+							diagnosticMode = "workspace",
+							useLibraryCodeForTypes = true,
+						},
+					},
+				},
+			},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
@@ -226,7 +249,7 @@ return {
 				settings = {
 					Lua = {
 						diagnostics = {
-							globals = { "vim" }
+							globals = { "vim" },
 						},
 						completion = {
 							callSnippet = "Replace",
@@ -255,7 +278,6 @@ return {
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
 		})
-		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 		require("mason-lspconfig").setup({
 			ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)

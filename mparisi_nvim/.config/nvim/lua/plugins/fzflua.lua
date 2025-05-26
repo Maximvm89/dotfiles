@@ -1,47 +1,75 @@
 return {
-  "ibhagwan/fzf-lua",
-  -- optional for icon support
-  -- dependencies = { "nvim-tree/nvim-web-devicons" },
-  -- -- or if using mini.icons/mini.nvim
-  dependencies = { "echasnovski/mini.icons" },
-  opts = {},
-  keys = {
+	"ibhagwan/fzf-lua",
+	-- optional for icon support
+	-- dependencies = { "nvim-tree/nvim-web-devicons" },
+	-- -- or if using mini.icons/mini.nvim
+	dependencies = { "echasnovski/mini.icons" },
+	opts = {
+		winopts = {
 
-	  {
-		  "<leader>sf",
-		  function()
-			  require("fzf-lua").files();
-		  end,
-		  desc = "Find Files",
-  	  },
-	  {
-		  "<leader>sb",
-		  function()
-			  require("fzf-lua").lgrep_curbuf();
-		  end,
-		  desc = "Live Grep current Buffer",
-  	  },
-	  {
-		  "<leader>sg",
-		  function()
-			  require("fzf-lua").live_grep();
-		  end,
-		  desc = "Live Grep current Project",
-  	  },
-	  {
-		  "<leader><leader>",
-		  function()
-			  require("fzf-lua").buffers();
-		  end,
-		  desc = "Open Buffers",
-  	  },
-	  {
-		  "<leader>sh",
-		  function()
-			  require("fzf-lua").oldfiles();
-		  end,
-		  desc = "Search Files History",
-  	  },
-  }
+			fullscreen = true,
+			preview = {
+				layout = "vertical"
+			}
+		},
+	},
+	keys = {
 
+		{
+			"<leader>sff",
+			function()
+				require("fzf-lua").files()
+			end,
+			desc = "Search Files in current work directory",
+		},
+		{
+			"<leader>sc",
+			function()
+				require("fzf-lua").files({ cwd = "~/.config/nvim" })
+			end,
+			desc = "Search Config Files",
+		},
+		{
+			"<leader>sfp",
+			function()
+				require("fzf-lua").files({ cwd = "/net/code/workspaces/mparisi/git" })
+			end,
+			desc = "Search Files in dev Project",
+		},
+		{
+			"<leader>sb",
+			function()
+				require("fzf-lua").lgrep_curbuf()
+			end,
+			desc = "Live Grep current Buffer",
+		},
+		{
+			"<leader>sgg",
+			function()
+				require("fzf-lua").live_grep()
+			end,
+			desc = "Live Grep current work directory",
+		},
+		{
+			"<leader>sgp",
+			function()
+				require("fzf-lua").live_grep({ cwd = "/net/code/workspaces/mparisi/git" })
+			end,
+			desc = "Live Grep in dev Project",
+		},
+		{
+			"<leader><leader>",
+			function()
+				require("fzf-lua").buffers()
+			end,
+			desc = "Open Buffers",
+		},
+		{
+			"<leader>sh",
+			function()
+				require("fzf-lua").oldfiles()
+			end,
+			desc = "Search Files History",
+		},
+	},
 }
