@@ -4,6 +4,7 @@ eval "$(zoxide init bash)"
 
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 export PATH=$PATH:/usr/local/go/bin:${HOME}/go/bin:
 
