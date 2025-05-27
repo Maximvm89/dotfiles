@@ -36,6 +36,7 @@ PS1=['\[\e[38;5;27m\]\h\[\e[0m\]@\[\e[37;2m\]\t\[\e[0m\] \[\e[3m\]\W\[\e[0m\] \[
 alias ws="cd /net/code/workspaces/mparisi/git"
 alias sshvfx="ssh sys2261.ldn.vfx -t bash"
 alias dev="module load job-fscfc;source /net/code/workspaces/mparisi/git/dev.sh"
+alias asu="analyseSoftwareUse"
 
 # alias sync_pvim="rsync -av --delete /net/code/workspaces/mparisi/envdev/pvim/ ~/pvim/"
 
