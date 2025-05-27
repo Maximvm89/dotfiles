@@ -30,6 +30,13 @@ return {
 			desc = "Search Config Files",
 		},
 		{
+			"<leader>sR",
+			function()
+				require("fzf-lua").resume()
+			end,
+			desc = "Search Resume",
+		},
+		{
 			"<leader>sfp",
 			function()
 				require("fzf-lua").files({ cwd = "/net/code/workspaces/mparisi/git" })
