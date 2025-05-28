@@ -23,8 +23,6 @@ function y() {
   rm -f -- "$tmp"
 }
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 alias ls="eza --color=always --long --git --icons=always --all"
 alias ll="ls -la"
 
