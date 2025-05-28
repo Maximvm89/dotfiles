@@ -1,8 +1,8 @@
 return {
-	"Maximvm89/nvim-treesitter",
+	"nvim-treesitter/nvim-treesitter",
 	install = {
 		prefer_git = true
-	},
+	}
 	dev = true,
 	build = ":TSUpdate",
 	config = function()
