@@ -3,7 +3,7 @@ return {
 		"Maximvm89/blink.cmp",
 		dev = true,
 		-- optional: provides snippets for the snippet source
-		dependencies = { "rafamadriz/friendly-snippets" },
+		dependencies = { "rafamadriz/friendly-snippets", dev = true },
 
 		-- use a release tag to download pre-built binaries
 		version = "*",
