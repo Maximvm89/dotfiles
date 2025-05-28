@@ -1,6 +1,7 @@
 return {
 	{
 		"Maximvm89/blink.cmp",
+		dev = true,
 		-- optional: provides snippets for the snippet source
 		dependencies = { "rafamadriz/friendly-snippets" },
 
