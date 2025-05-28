@@ -6,7 +6,6 @@ return {
 		local configs = require("nvim-treesitter.configs")
 		configs.setup({
 			ensure_installed = { "lua", "python", "tcl", "bash" },
-			parser_install_dir = vim.fn.stdpath('data') .. '/treesitter-parsers',
 			sync_install = false,
 			highlight = { enable = true },
 			indent = { enable = true },
