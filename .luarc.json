@@ -1,6 +1,13 @@
 {
     "diagnostics.globals": [
         "vim",
-        "LazyVim"
+        "LazyVim",
+        "Snacks"
+    ],
+    "diagnostics.disable": [
+        "undefined-doc-name",
+        "undefined-global",
+        "undefined-field",
+        "deprecated"
     ]
 }
