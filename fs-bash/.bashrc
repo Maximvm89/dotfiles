@@ -46,7 +46,6 @@ alias sshshared="ssh sys-vm0065.ldn"
 export PATH="/net/code/workspaces/mparisi/envdev/.cargo/bin:$PATH"
 export PATH="/net/code/workspaces/mparisi/envdev/lazygit:$PATH"
 export PATH="/net/code/workspaces/mparisi/envdev/ripgrep:$PATH"
-export PATH="/net/code/workspaces/mparisi/envdev/fzf/bin:$PATH"
 export PATH="/net/code/workspaces/mparisi/envdev/nvim_appimage:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
@@ -54,4 +53,6 @@ export NVM_DIR="$HOME/.nvm"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-[ -f /net/code/workspaces/mparisi/envdev/.fzf.bash ] && source /net/code/workspaces/mparisi/envdev/.fzf.bash
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
