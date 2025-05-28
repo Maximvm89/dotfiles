@@ -1,5 +1,4 @@
 return{
-   "folke/neoconf.nvim",
-   dev = true,
+   "folke/neoconf.nvim"
 }
 

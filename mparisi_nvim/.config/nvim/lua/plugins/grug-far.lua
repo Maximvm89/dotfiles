@@ -1,6 +1,5 @@
 return {
 	"MagicDuck/grug-far.nvim",
-	dev = true,
 	opts = {},
 	keys = {
 		{
@@ -15,7 +14,7 @@ return {
 			function()
 				require("grug-far").open({
 					prefills = {
-						paths = vim.fn.expand("%"),
+						paths = vim.fn.expand("%"),  
 						search = vim.fn.expand("<cword>") }
 				});
 			end,

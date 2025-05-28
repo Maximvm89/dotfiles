@@ -8,7 +8,6 @@ return {
   -- setup mini.diff
   {
     "echasnovski/mini.diff",
-    dev=true,
     event = "VeryLazy",
     keys = {
       {

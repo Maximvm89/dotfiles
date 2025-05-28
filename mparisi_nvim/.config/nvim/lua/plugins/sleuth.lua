@@ -1,4 +1,3 @@
 return{
-	"tpope/vim-sleuth",
-	dev = true,
+	"tpope/vim-sleuth"
 }
