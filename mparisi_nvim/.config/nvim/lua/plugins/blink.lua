@@ -1,6 +1,6 @@
 return {
 	{
-		"Maximvm89/blink.cmp",
+		"Saghen/blink.cmp",
 		-- optional: provides snippets for the snippet source
 		dependencies = { "rafamadriz/friendly-snippets" },
 

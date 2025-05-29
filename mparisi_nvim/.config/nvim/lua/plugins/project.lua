@@ -5,6 +5,7 @@ return {
       "/Volumes/Framestore/git",
       "~/.config/*",
     },
+    last_session_on_startup = false,
     picker = {
       type = "telescope", -- or "fzf-lua"
     }

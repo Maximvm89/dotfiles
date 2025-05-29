@@ -24,15 +24,16 @@ return {
         header = vim.split(logo, "\n"),
         -- stylua: ignore
         center = {
-          { action = 'lua require("fzf-lua").files()',                                                desc = " Find File",       icon = " ", key = "f" },
-          { action = 'lua require("fzf-lua").files({cwd = "/net/code/workspaces/mparisi/git"})',      desc = " Git Find File",   icon = " ", key = "d" },
-          { action = "ene | startinsert",                                                             desc = " New File",        icon = " ", key = "n" },
-          { action = 'lua require("fzf-lua").oldfiles()',                                             desc = " Old Files",       icon = " ", key = "r" },
-          { action = 'lua require("fzf-lua").live_grep()',                                                desc = " Find Text",       icon = " ", key = "g" },
-          { action = 'lua require("fzf-lua").live_grep({cwd = "/net/code/workspaces/mparisi/git"})',      desc = " Git Find Text",   icon = " ", key = "t" },
-          { action = 'lua require("fzf-lua").files({cwd = "~/.config/nvim"})',                        desc = " Config",          icon = " ", key = "c" },
-          { action = "Lazy",                                                                          desc = " Lazy",            icon = "󰒲 ", key = "l" },
-          { action = function() vim.api.nvim_input("<cmd>qa<cr>") end,                                desc = " Quit",            icon = " ", key = "q" },
+          { action = 'lua require("fzf-lua").files()',                                                      desc = " Find File",       icon = " ", key = "f" },
+          { action = 'lua require("fzf-lua").files({cwd = "/net/code/workspaces/mparisi/git"})',            desc = " Git Find File",   icon = " ", key = "d" },
+          { action = "ene | startinsert",                                                                   desc = " New File",        icon = " ", key = "n" },
+          { action = 'NeovimProjectHistory',                                                                desc = " Projects",        icon = " ", key = "p" },
+          { action = 'lua require("fzf-lua").oldfiles()',                                                   desc = " Old Files",       icon = " ", key = "r" },
+          { action = 'lua require("fzf-lua").live_grep()',                                                  desc = " Find Text",       icon = " ", key = "g" },
+          { action = 'lua require("fzf-lua").live_grep({cwd = "/net/code/workspaces/mparisi/git"})',        desc = " Git Find Text",   icon = "󱦞 ", key = "t" },
+          { action = 'lua require("fzf-lua").files({cwd = "~/.config/nvim"})',                              desc = " Config",          icon = " ", key = "c" },
+          { action = "Lazy",                                                                                desc = " Lazy",            icon = "󰒲 ", key = "l" },
+          { action = function() vim.api.nvim_input("<cmd>qa<cr>") end,                                      desc = " Quit",            icon = " ", key = "q" },
         },
         footer = function()
           local stats = require("lazy").stats()

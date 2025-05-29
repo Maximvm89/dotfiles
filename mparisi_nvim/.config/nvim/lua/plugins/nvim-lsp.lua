@@ -192,8 +192,8 @@ return {
 		-- LSP servers and clients are able to communicate to each other what features they support.
 		--  By default, Neovim doesn't support everything that is in the LSP specification.
 		--  When you add blink.cmp, luasnip, etc. Neovim now has *more* capabilities.
-		--  So, we create new capabilities with blink.cmp, and then broadcast that to the servers.
-		local capabilities = require("blink.cmp").get_lsp_capabilities()
+		-- So, we create new capabilities with blink.cmp, and then broadcast that to the servers.
+		-- local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 		-- Enable the following language servers
 		--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -204,33 +204,11 @@ return {
 		--  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
 		--  - settings (table): Override the default settings passed when initializing the server.
 		--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
-		local util = require'lspconfig/util'
 		local servers = {
 			-- clangd = {},
 			-- gopls = {},
 			bashls = {},
 			pyright = {
-				-- root_markers = { "pyrightconfig.json", ".git"},
-				root_dir = function (fname)
-					local root_files = {
-						'pyproject.toml',
-						'setup.py',
-						'setup.cfg',
-						'requirements.txt',
-						'Pipfile',
-						'pyrightconfig.json',
-					}
-					return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname) or util.path.dirname(fname)
-				end,
-				settings = {
-					python = {
-						analysis = {
-							autoSearchPaths = false,
-							diagnosticMode = "workspace",
-							useLibraryCodeForTypes = true,
-						},
-					},
-				},
 			},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
