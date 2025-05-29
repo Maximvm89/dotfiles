@@ -7,14 +7,12 @@ return {
 		bigfile = { enabled = true },
 		-- dashboard = { enabled = true },
 		git = { enabled = true },
-		explorer = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = true },
 		notifier = {
 			enabled = true,
 			timeout = 3000,
 		},
-		picker = { enabled = true },
 		quickfile = { enabled = true },
 		scope = { enabled = true },
 		scroll = { enabled = true },
@@ -22,7 +20,7 @@ return {
 		words = { enabled = true },
 		styles = {
 			notification = {
-				wo = { wrap = true }, -- Wrap notifications
+				wo = { wrap = false }, -- Wrap notifications
 			},
 		},
 	},
@@ -36,20 +34,12 @@ return {
 			desc = "Command History",
 		},
 		{
-			"<leader>n",
+			"<leader>nn",
 			function()
 				Snacks.picker.notifications()
 			end,
 			desc = "Notification History",
 		},
-		{
-			"<leader>e",
-			function()
-				Snacks.explorer()
-			end,
-			desc = "File Explorer",
-		},
-
 		-- Other
 		{
 			"<leader>.",
@@ -66,7 +56,7 @@ return {
 			desc = "Select Scratch Buffer",
 		},
 		{
-			"<leader>n",
+			"<leader>nh",
 			function()
 				Snacks.notifier.show_history()
 			end,
