@@ -1,2 +1,3 @@
+require("core.lsp")
+
 require("config.lazy")
-vim.o.termguicolors = true

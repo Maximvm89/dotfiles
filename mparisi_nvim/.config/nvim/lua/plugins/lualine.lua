@@ -1,6 +1,8 @@
 return {
     'nvim-lualine/lualine.nvim',
+    enabled = true,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    enabled = false,
-    opts = {},
+    opts = {
+        options = { theme = 'material' },
+},
 }

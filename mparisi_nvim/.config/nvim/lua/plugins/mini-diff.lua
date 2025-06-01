@@ -8,6 +8,7 @@ return {
   -- setup mini.diff
   {
     "echasnovski/mini.diff",
+    enabled = true,
     event = "VeryLazy",
     keys = {
       {
@@ -31,7 +32,7 @@ return {
   },
   {
     "mini.diff",
-    opts = function()
+   opts = function()
       Snacks.toggle({
         name = "Mini Diff Signs",
         get = function()
@@ -53,25 +54,5 @@ return {
     end,
   },
 
-  -- lualine integration
-  {
-    "nvim-lualine/lualine.nvim",
-    opts = function(_, opts)
-      local x = opts.sections.lualine_x
-      for _, comp in ipairs(x) do
-        if comp[1] == "diff" then
-          comp.source = function()
-            local summary = vim.b.minidiff_summary
-            return summary
-              and {
-                added = summary.add,
-                modified = summary.change,
-                removed = summary.delete,
-              }
-          end
-          break
-        end
-      end
-    end,
-  },
+  
 }

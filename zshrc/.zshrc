@@ -23,6 +23,9 @@ function y() {
   rm -f -- "$tmp"
 }
 
+alias ws=/Volumes/Framestore/git
+alias pcoip=/Applications/PCoIPClient.app/Contents/MacOS/PCoIPClient
+
 alias ls="eza --color=always --long --git --icons=always --all"
 alias ll="ls -la"
 
@@ -30,10 +33,10 @@ alias nfs="zellij delete-all-sessions; zellij --session Framestore"
 alias fs="zellij attach Framestore"
 alias vpn="~/vpn_launcher"
 
-alias sshshared="ssh -Y sys-vm0065.ldn"
-alias sshsharedel7="ssh -Y sys-vm0019.ldn"
-alias sshvfx="ssh -Y sys2261.ldn.vfx"
-alias sshvfxel9="ssh -Y sys2240.ldn.vfx"
+alias sshshared="kitten ssh -Y sys-vm0065.ldn"
+alias sshsharedel7="kitten ssh -Y sys-vm0019.ldn"
+alias sshvfx="kitten ssh -Y sys2261.ldn.vfx"
+alias sshvfxel9="kitten ssh -Y sys2240.ldn.vfx"
 setopt inc_append_history
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"

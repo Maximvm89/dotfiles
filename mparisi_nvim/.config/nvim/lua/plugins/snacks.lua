@@ -5,15 +5,15 @@ return {
 	---@type snacks.Config
 	opts = {
 		bigfile = { enabled = true },
-		-- dashboard = { enabled = true },
 		git = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = true },
-		notifier = {
-			enabled = true,
-			timeout = 3000,
-		},
-		quickfile = { enabled = true },
+		-- notifier = {
+		-- 	enabled = true,
+		-- 	timeout = 3000,
+		-- },
+		-- quickfile = { enabled = true },
+		picker = { enabled = true },
 		scope = { enabled = true },
 		scroll = { enabled = true },
 		statuscolumn = { enabled = true },
@@ -33,13 +33,6 @@ return {
 			end,
 			desc = "Command History",
 		},
-		{
-			"<leader>nn",
-			function()
-				Snacks.picker.notifications()
-			end,
-			desc = "Notification History",
-		},
 		-- Other
 		{
 			"<leader>.",
@@ -56,13 +49,6 @@ return {
 			desc = "Select Scratch Buffer",
 		},
 		{
-			"<leader>nh",
-			function()
-				Snacks.notifier.show_history()
-			end,
-			desc = "Notification History",
-		},
-		{
 			"<leader>bd",
 			function()
 				Snacks.bufdelete()
@@ -75,20 +61,6 @@ return {
 				Snacks.rename.rename_file()
 			end,
 			desc = "Rename File",
-		},
-		{
-			"<leader>gg",
-			function()
-				Snacks.lazygit()
-			end,
-			desc = "Lazygit",
-		},
-		{
-			"<leader>un",
-			function()
-				Snacks.notifier.hide()
-			end,
-			desc = "Dismiss All Notifications",
 		},
 		{
 			"<c-/>",
@@ -143,7 +115,7 @@ return {
 		vim.api.nvim_create_autocmd("User", {
 			pattern = "VeryLazy",
 			callback = function()
-				-- Setup some globals for debugging (lazy-loaded)
+				-- Setup some globals for debugging (l eazy-loaded)
 				_G.dd = function(...)
 					Snacks.debug.inspect(...)
 				end
