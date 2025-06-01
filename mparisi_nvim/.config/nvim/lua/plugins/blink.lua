@@ -2,6 +2,7 @@ return {
 	{
 		"Saghen/blink.cmp",
 		enabled = true,
+		dev = _G.PL_DEV,
 		-- optional: provides snippets for the snippet source
 		dependencies = { "rafamadriz/friendly-snippets" },
 

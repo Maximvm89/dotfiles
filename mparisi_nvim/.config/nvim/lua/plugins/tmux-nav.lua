@@ -1,5 +1,6 @@
 return {
 	"alexghergh/nvim-tmux-navigation",
+	dev = _G.PL_DEV,
 	config = function()
 		local nvim_tmux_nav = require("nvim-tmux-navigation")
 

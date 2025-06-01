@@ -1,5 +1,6 @@
 return {
 	"folke/snacks.nvim",
+	dev = _G.PL_DEV,
 	priority = 1000,
 	lazy = false,
 	---@type snacks.Config

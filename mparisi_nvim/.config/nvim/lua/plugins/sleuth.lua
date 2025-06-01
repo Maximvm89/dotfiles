@@ -1,3 +1,4 @@
-return{
-	"tpope/vim-sleuth"
+return {
+	"tpope/vim-sleuth",
+	dev = _G.PL_DEV,
 }

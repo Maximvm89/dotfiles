@@ -1,6 +1,7 @@
 return {
 	"MagicDuck/grug-far.nvim",
 	enabled = true,
+	dev = _G.PL_DEV,
 	opts = {},
 	keys = {
 		{

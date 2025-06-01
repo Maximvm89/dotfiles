@@ -2,6 +2,7 @@ return
 {
   "folke/which-key.nvim",
     enabled = true,
+	dev = _G.PL_DEV,
   event = "VeryLazy",
   opts = {
     -- your configuration comes here
