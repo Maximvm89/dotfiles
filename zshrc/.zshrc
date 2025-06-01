@@ -23,7 +23,7 @@ function y() {
   rm -f -- "$tmp"
 }
 
-alias ws=/Volumes/Framestore/git
+alias ws='cd /Volumes/Framestore/git'
 alias pcoip=/Applications/PCoIPClient.app/Contents/MacOS/PCoIPClient
 
 alias ls="eza --color=always --long --git --icons=always --all"
