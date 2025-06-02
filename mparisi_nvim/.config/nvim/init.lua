@@ -1,7 +1,12 @@
 -- init.lua
 if os.getenv("PL_ZONE") == "vfx" then
 	_G.PL_DEV = true
+	_G.Theme = "nord"
+elseif os.getenv("PL_ZONE") == "shared" then
+	_G.Theme = "kanagawa"
 else
+	-- _G.Theme = "catppuccin-frappe"
+	_G.Theme = "nord"
 	_G.PL_DEV = false
 end
 
@@ -24,3 +29,5 @@ _G.Config_dir = "~/.config/nvim"
 
 require("core.lsp")
 require("config.lazy")
+
+vim.cmd("colorscheme " .. Theme)
