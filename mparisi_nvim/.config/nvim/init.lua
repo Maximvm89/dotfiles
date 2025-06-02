@@ -12,9 +12,12 @@ end
 if _G.PL_SITE then
 	_G.Work_dir = "/net/code/workspaces/mparisi/git"
 	_G.Local_repos = "/net/code/workspaces/mparisi/lazyvim"
+	_G.Treesitter_parsers_path = "/net/code/workspaces/mparisi/lazyvim/nvim-treesitter/parser"
+	vim.opt.runtimepath:prepend(Treesitter_parsers_path)
 else
 	_G.Work_dir = "/Volumes/Framestore/git"
 	_G.Local_repos = ""
+	_G.Treesitter_parsers_path = nil
 end
 
 _G.Config_dir = "~/.config/nvim"
