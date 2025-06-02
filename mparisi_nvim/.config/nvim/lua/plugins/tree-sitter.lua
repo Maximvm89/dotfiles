@@ -6,7 +6,7 @@ return {
 	config = function()
 		local configs = require("nvim-treesitter.configs")
 		configs.setup({
-			ensure_installed = { "lua", "python", "tcl", "bash", "json", "regex" },
+			-- ensure_installed = { "lua", "python", "tcl", "bash", "json", "regex" },
 			parser_install_dir  = Treesitter_parsers_path,
 			sync_install = false,
 			highlight = { enable = true },
