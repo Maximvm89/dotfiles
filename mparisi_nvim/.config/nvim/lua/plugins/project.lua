@@ -16,12 +16,12 @@ return {
 		vim.opt.sessionoptions:append("globals") -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
 	end,
 	dependencies = {
-		{ "nvim-lua/plenary.nvim" },
+		{ "nvim-lua/plenary.nvim", dev = PL_DEV },
 		-- optional picker
-		{ "nvim-telescope/telescope.nvim", tag = "0.1.4" },
+		{ "nvim-telescope/telescope.nvim", tag = "0.1.4", dev = PL_DEV },
 		-- optional picker
-		{ "ibhagwan/fzf-lua" },
-		{ "Shatur/neovim-session-manager" },
+		{ "ibhagwan/fzf-lua", dev = PL_DEV },
+		{ "Shatur/neovim-session-manager", dev = PL_DEV },
 	},
 	lazy = false,
 	priority = 100,

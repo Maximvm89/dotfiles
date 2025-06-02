@@ -1,9 +1,10 @@
 return {
-  {
-    "FabijanZulj/blame.nvim",
-    lazy = false,
-    config = function()
-      require('blame').setup {}
-    end,
-  },
+	{
+		"FabijanZulj/blame.nvim",
+		lazy = false,
+		dev = _G.PL_DEV,
+		config = function()
+			require("blame").setup({})
+		end,
+	},
 }
