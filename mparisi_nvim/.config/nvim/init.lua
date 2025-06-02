@@ -5,6 +5,17 @@ else
   _G.PL_DEV = false
 end
 
+if os.getenv("PL_SITE") then
+  _G.PL_SITE = true
+end
+
+if _G.PL_SITE then
+	 _G.Work_dir = "/net/code/workspaces/mparisi/git"
+else
+	 _G.Work_dir = "/Volumes/Framestore/git"
+end
+
+_G.Config_dir = "~/.config/nvim"
 
 require("core.lsp")
 require("config.lazy")

@@ -41,7 +41,7 @@ return {
 		{
 			"<leader>sfp",
 			function()
-				require("fzf-lua").files({ cwd = "/net/code/workspaces/mparisi/git" })
+				require("fzf-lua").files({ cwd = Work_dir})
 			end,
 			desc = "Search Files in dev Project",
 		},
@@ -62,7 +62,7 @@ return {
 		{
 			"<leader>sgp",
 			function()
-				require("fzf-lua").live_grep({ cwd = "/net/code/workspaces/mparisi/git" })
+				require("fzf-lua").live_grep({ cwd = Work_dir})
 			end,
 			desc = "Live Grep in dev Project",
 		},

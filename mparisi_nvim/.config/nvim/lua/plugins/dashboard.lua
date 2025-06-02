@@ -25,15 +25,17 @@ return {
 			config = {
 				header = vim.split(logo, "\n"),
         -- stylua: ignore
+
+
         center = {
           { action = 'lua require("fzf-lua").files()',                                                      desc = " Find File",       icon = " ", key = "f" },
-          { action = 'lua require("fzf-lua").files({cwd = "/net/code/workspaces/mparisi/git"})',            desc = " Git Find File",   icon = " ", key = "d" },
+          { action = function() require("fzf-lua").files({cwd = Work_dir}) end,                             desc = " Git Find File",   icon = " ", key = "d" },
           { action = "ene | startinsert",                                                                   desc = " New File",        icon = " ", key = "n" },
-          { action = 'NeovimProjectHistory',                                                                desc = " Projects",        icon = " ", key = "p" },
           { action = 'lua require("fzf-lua").oldfiles()',                                                   desc = " Old Files",       icon = " ", key = "r" },
           { action = 'lua require("fzf-lua").live_grep()',                                                  desc = " Find Text",       icon = " ", key = "g" },
-          { action = 'lua require("fzf-lua").live_grep({cwd = "/net/code/workspaces/mparisi/git"})',        desc = " Git Find Text",   icon = "󱦞 ", key = "t" },
-          { action = 'lua require("fzf-lua").files({cwd = "~/.config/nvim"})',                              desc = " Config",          icon = " ", key = "c" },
+          { action = function() require("fzf-lua").live_grep({cwd = Work_dir}) end,                         desc = " Git Find Text",   icon = "󱦞 ", key = "t" },
+          { action = function() require("fzf-lua").files({cwd = Config_dir}) end,                           desc = " Config",          icon = " ", key = "c" },
+          { action = function() require("fzf-lua").live_grep({cwd = Config_dir}) end,                       desc = " Grep Config",     icon = " ", key = "v" },
           { action = "Lazy",                                                                                desc = " Lazy",            icon = "󰒲 ", key = "l" },
           { action = function() vim.api.nvim_input("<cmd>qa<cr>") end,                                      desc = " Quit",            icon = " ", key = "q" },
         },
