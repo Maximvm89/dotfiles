@@ -18,7 +18,7 @@ return {
 		dev = _G.PL_DEV,
 		dependencies = {
 			{ "nvim-lua/plenary.nvim", dev=PL_DEV },
-			{ "nvim-tree/nvim-web-devicons", dev=PL_DEV -- not strictly required, but recommended },
+			{ "nvim-tree/nvim-web-devicons", dev=PL_DEV }, -- not strictly required, but recommended
 			{ "MunifTanjim/nui.nvim", dev=PL_DEV},
 			-- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
 			{
