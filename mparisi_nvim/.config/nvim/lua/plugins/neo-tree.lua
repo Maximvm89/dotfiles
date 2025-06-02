@@ -17,9 +17,9 @@ return {
 		enabled = true,
 		dev = _G.PL_DEV,
 		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
+			{ "nvim-lua/plenary.nvim", dev=PL_DEV },
+			{ "nvim-tree/nvim-web-devicons", dev=PL_DEV -- not strictly required, but recommended },
+			{ "MunifTanjim/nui.nvim", dev=PL_DEV},
 			-- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
 			{
 				"s1n7ax/nvim-window-picker", -- for open_with_window_picker keymaps
