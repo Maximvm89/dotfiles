@@ -4,6 +4,6 @@ return {
 	dev = _G.PL_DEV,
 	dependencies = { "nvim-tree/nvim-web-devicons", dev = PL_DEV },
 	opts = {
-		options = { theme = "nord" },
+		options = { theme = Theme },
 	},
 }

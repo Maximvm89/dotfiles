@@ -10,11 +10,15 @@ return {
 		-- end,
 	},
 	{
+		"EdenEast/nightfox.nvim",
+		-- dev = PL_DEV,
+	},
+	{
 		"rebelot/kanagawa.nvim",
 		-- dev = PL_DEV,
 		name = "kanagawa",
 		priority = 1000,
-		opts = {}
+		opts = {},
 	},
 	{
 		"shaunsingh/nord.nvim",
