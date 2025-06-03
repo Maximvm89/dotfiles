@@ -11,6 +11,24 @@ return {
 		enabled = true,
 		dev = _G.PL_DEV,
 		event = "VeryLazy",
+		mappings = {
+			-- Apply hunks inside a visual/operator region
+			apply = "gH",
+
+			-- Reset hunks inside a visual/operator region
+			reset = "gh",
+
+			-- Hunk range textobject to be used inside operator
+			-- Works also in Visual mode if mapping differs from apply and reset
+			textobject = "gh",
+
+			-- Go to hunk range in corresponding direction
+			goto_first = "[h",
+			goto_prev = "[[",
+			goto_next = "]]",
+			goto_last = "]h",
+		},
+
 		keys = {
 			{
 				"<leader>go",
