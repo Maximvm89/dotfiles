@@ -48,6 +48,7 @@ export PATH="/net/code/workspaces/mparisi/envdev/.cargo/bin:$PATH"
 export PATH="/net/code/workspaces/mparisi/envdev/lazygit:$PATH"
 export PATH="/net/code/workspaces/mparisi/envdev/ripgrep:$PATH"
 export PATH="/net/code/workspaces/mparisi/envdev/nvim_appimage:$PATH"
+export PATH="/net/code/workspaces/mparisi/envdev/kitty/kitty.app/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
 
