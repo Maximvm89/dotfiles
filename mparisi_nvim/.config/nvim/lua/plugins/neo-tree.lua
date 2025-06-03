@@ -17,9 +17,9 @@ return {
 		enabled = true,
 		dev = _G.PL_DEV,
 		dependencies = {
-			{ "nvim-lua/plenary.nvim", dev=PL_DEV },
-			{ "nvim-tree/nvim-web-devicons", dev=PL_DEV }, -- not strictly required, but recommended
-			{ "MunifTanjim/nui.nvim", dev=PL_DEV},
+			{ "nvim-lua/plenary.nvim", dev = PL_DEV },
+			{ "nvim-tree/nvim-web-devicons", dev = PL_DEV }, -- not strictly required, but recommended
+			{ "MunifTanjim/nui.nvim", dev = PL_DEV },
 			-- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
 			{
 				"s1n7ax/nvim-window-picker", -- for open_with_window_picker keymaps
@@ -190,7 +190,7 @@ return {
 						["<2-LeftMouse>"] = "open",
 						["<cr>"] = "open",
 						["<esc>"] = "cancel", -- close preview or floating neo-tree window
-						["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
+						-- ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
 						-- Read `# Preview Mode` for more information
 						["l"] = "focus_preview",
 						["S"] = "open_split",
@@ -247,6 +247,24 @@ return {
 						--   -- }
 						-- },
 						--
+						["P"] = function(state)
+							local node = state.tree:get_node()
+							require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
+						end,
+						-- ["U"] = function(state)
+						-- 	local tree = state.tree
+						-- 	local node = tree:get_node()
+						-- 	local siblings = tree:get_nodes(node:get_parent_id())
+						-- 	local renderer = require("neo-tree.ui.renderer")
+						-- 	renderer.focus_node(state, siblings[#siblings]:get_id())
+						-- end,
+						-- ["D"] = function(state)
+						-- 	local tree = state.tree
+						-- 	local node = tree:get_node()
+						-- 	local siblings = tree:get_nodes(node:get_parent_id())
+						-- 	local renderer = require("neo-tree.ui.renderer")
+						-- 	renderer.focus_node(state, siblings[1]:get_id())
+						-- end,
 						-- upload (sync files)
 						uu = {
 							function(state)
