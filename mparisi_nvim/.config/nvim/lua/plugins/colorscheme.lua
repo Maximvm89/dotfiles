@@ -1,7 +1,7 @@
 return {
 	{
 		"catppuccin/nvim",
-		-- dev = PL_DEV,
+		dev = PL_DEV,
 		name = "catppuccin",
 		priority = 1000,
 		-- config = function()
@@ -11,18 +11,15 @@ return {
 	},
 	{
 		"EdenEast/nightfox.nvim",
-		-- dev = PL_DEV,
+		dev = PL_DEV,
 	},
 	{
 		"rebelot/kanagawa.nvim",
-		-- dev = PL_DEV,
-		name = "kanagawa",
-		priority = 1000,
+		dev = PL_DEV,
 		opts = {},
 	},
 	{
 		"shaunsingh/nord.nvim",
-		-- dev = PL_DEV,
-		name = "nord",
+		dev = PL_DEV,
 	},
 }
