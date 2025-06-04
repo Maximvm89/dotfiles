@@ -32,7 +32,7 @@ if os.getenv("PL_ZONE") == "vfx" then
 	_G.Theme = "nord"
 	_G.Logo = logo_vfx
 elseif os.getenv("PL_ZONE") == "shared" then
-	_G.Theme = "terafox"
+	_G.Theme = "catppuccin-frappe"
 	_G.Logo = logo_shared
 else
 	-- _G.Theme = "catppuccin-frappe"
