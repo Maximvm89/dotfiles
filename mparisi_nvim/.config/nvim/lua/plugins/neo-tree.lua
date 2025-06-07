@@ -69,6 +69,7 @@ return {
 			-- vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
 
 			require("neo-tree").setup({
+				sources = { "filesystem", "buffers", "git_status", "document_symbols" },
 				close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
 				popup_border_style = "", -- or "" to use 'winborder' on Neovim v0.11+
 				enable_git_status = true,
@@ -433,7 +434,7 @@ return {
 				},
 			})
 
-			vim.keymap.set("n", "<leader>e", "<Cmd>Neotree reveal<CR>")
+			vim.keymap.set("n", "<leader>e", "<Cmd>Neotree float reveal<CR>")
 		end,
 	},
 }

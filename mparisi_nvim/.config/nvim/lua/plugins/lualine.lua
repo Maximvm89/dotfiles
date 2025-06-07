@@ -29,7 +29,13 @@ return {
 					},
 				},
 			},
-			lualine_x = {'lsp_status', 'encoding', 'fileformat', 'filetype', 'hostname'},
+			lualine_x = {
+			-- 	"lsp_status",
+			-- 	"encoding",
+			-- 	"fileformat",
+			-- 	"filetype",
+			-- 	"hostname",
+			},
 		},
 	},
 }
