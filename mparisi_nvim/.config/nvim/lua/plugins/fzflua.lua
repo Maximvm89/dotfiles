@@ -23,6 +23,20 @@ return {
 			desc = "Search Files in current work directory",
 		},
 		{
+			"<leader>sw",
+			function()
+				require("fzf-lua").grep_cword({ cwd = Work_dir })
+			end,
+			desc = "Search word under cursor in project",
+		},
+		{
+			"<leader>sw",
+			function()
+				require("fzf-lua").grep_cword({ cwd = Work_dir })
+			end,
+			desc = "Search WORD under cursor in project",
+		},
+		{
 			"<leader>sc",
 			function()
 				require("fzf-lua").files({ cwd = "~/.config/nvim" })
@@ -39,7 +53,7 @@ return {
 		{
 			"<leader>sfp",
 			function()
-				require("fzf-lua").files({ cwd = Work_dir})
+				require("fzf-lua").files({ cwd = Work_dir })
 			end,
 			desc = "Search Files in dev Project",
 		},
@@ -60,7 +74,7 @@ return {
 		{
 			"<leader>sgp",
 			function()
-				require("fzf-lua").live_grep({ cwd = Work_dir})
+				require("fzf-lua").live_grep({ cwd = Work_dir })
 			end,
 			desc = "Live Grep in dev Project",
 		},
