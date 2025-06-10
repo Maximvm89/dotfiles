@@ -29,15 +29,16 @@ return {
 
 
         center = {
-          { action = 'lua require("fzf-lua").files()',                                                      desc = " Find File",	       icon = " ", key = "f" },
-          { action = function() require("fzf-lua").files({cwd = Work_dir}) end,                             desc = " Git Find File",	       icon = " ", key = "d" },
-          { action = "cd ~/notes/Marco | e ~/notes/Marco/scratch.md",                                                          desc = " New Scratch Note",	       icon = " ", key = "n" },
-          { action = function() require("fzf-lua").files({cwd = "~/notes/Marco"}) end,                      desc = " Find Notes",	       icon = " ", key = "N" },
+          { action = 'lua require("fzf-lua").files()',                                                      desc = " Find File Cwd",	       icon = " ", key = "ff" },
+          { action = function() require("fzf-lua").files({cwd = Work_dir}) end,                             desc = " Find Git File",	       icon = " ", key = "fg" },
+          { action = 'Neorg index',                                                                         desc = " New Scratch Note",	       icon = " ", key = "n" },
+          { action = function() require("fzf-lua").files({cwd = "~/notes/Marco"}) end,                      desc = " Find Notes",	       icon = " ", key = "fn" },
+          { action = function() require("fzf-lua").live_grep({cwd = "~/notes/Marco"}) end,                  desc = " Grep Notes",	       icon = " ", key = "gn" },
           { action = 'lua require("fzf-lua").oldfiles()',                                                   desc = " Old Files",	       icon = " ", key = "r" },
-          { action = 'lua require("fzf-lua").live_grep()',                                                  desc = " Find Text",	       icon = " ", key = "g" },
-          { action = function() require("fzf-lua").live_grep({cwd = Work_dir}) end,                         desc = " Git Find Text",	       icon = "󱦞 ", key = "t" },
+          { action = 'lua require("fzf-lua").live_grep()',                                                  desc = " Grep Cwd",	               icon = " ", key = "gc" },
+          { action = function() require("fzf-lua").live_grep({cwd = Work_dir}) end,                         desc = " Grep Git",	               icon = "󱦞 ", key = "gg" },
           { action = function() require("fzf-lua").files({cwd = Config_dir}) end,                           desc = " Config",		       icon = " ", key = "c" },
-          { action = function() require("fzf-lua").live_grep({cwd = Config_dir}) end,                       desc = " Grep Config",	       icon = " ", key = "v" },
+          { action = function() require("fzf-lua").live_grep({cwd = Config_dir}) end,                       desc = " Grep Config",	       icon = " ", key = "gc" },
           { action = "Lazy",                                                                                desc = " Lazy",		       icon = "󰒲 ", key = "l" },
           { action = function() vim.api.nvim_input("<cmd>qa<cr>") end,                                      desc = " Quit",		       icon = " ", key = "q" },
         },

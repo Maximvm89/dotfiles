@@ -29,7 +29,7 @@ local logo_local = [[
 
 if os.getenv("PL_ZONE") == "vfx" then
 	_G.PL_DEV = true
-	_G.Theme = "nord"
+	_G.Theme = "catppuccin"
 	_G.Logo = logo_vfx
 elseif os.getenv("PL_ZONE") == "shared" then
 	_G.Theme = "catppuccin-frappe"
