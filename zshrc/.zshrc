@@ -36,7 +36,7 @@ alias vpn="~/vpn_launcher"
 alias sshshared="kitten ssh -Y sys-vm0065.ldn"
 alias sshsharedel7="kitten ssh -Y sys-vm0019.ldn"
 alias sshvfxel7="kitten ssh -Y sys2261.ldn.vfx"
-alias sshvfx="kitten ssh -Y sys2767.ldn.vfx"
+alias sshvfx="kitten ssh -Y sys2240.ldn.vfx"
 setopt inc_append_history
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
