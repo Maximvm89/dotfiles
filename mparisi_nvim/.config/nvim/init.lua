@@ -35,8 +35,8 @@ elseif os.getenv("PL_ZONE") == "shared" then
 	_G.Theme = "catppuccin-frappe"
 	_G.Logo = logo_shared
 else
-	-- _G.Theme = "catppuccin-frappe"
-	_G.Theme = "nord"
+	_G.Theme = "catppuccin-frappe"
+	-- _G.Theme = "nord"
 	_G.Logo = logo_local
 	_G.PL_DEV = false
 end
@@ -45,7 +45,7 @@ if os.getenv("PL_SITE") then
 	_G.PL_SITE = true
 end
 
-if _G.PL_SITE then  
+if _G.PL_SITE then
 	_G.Work_dir = "/net/code/workspaces/mparisi/git"
 	_G.Local_repos = "/net/code/workspaces/mparisi/lazyvim"
 	_G.Treesitter_parsers_path = "/net/code/workspaces/mparisi/lazyvim/nvim-treesitter/parser"

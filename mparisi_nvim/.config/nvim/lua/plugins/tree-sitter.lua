@@ -14,10 +14,10 @@ return {
 			incremental_selection = {
 				enable = true,
 				keymaps = {
-					init_selection = "<Enter>", -- set to `false` to disable one of the mappings
-					node_incremental = "<Enter>",
+					init_selection =   "<C-Enter>", -- set to `false` to disable one of the mappings
+					node_incremental = "<C-Enter>",
+					node_decremental = "<C-Backspace>",
 					scope_incremental = false,
-					node_decremental = "<Backspace>",
 				},
 			},
 		})
