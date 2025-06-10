@@ -15,7 +15,7 @@ return {
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
 		enabled = true,
-		dev = _G.PL_DEV,
+		dev = PL_DEV,
 		dependencies = {
 			{ "nvim-lua/plenary.nvim", dev = PL_DEV },
 			{ "nvim-tree/nvim-web-devicons", dev = PL_DEV }, -- not strictly required, but recommended
