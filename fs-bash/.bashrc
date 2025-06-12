@@ -57,6 +57,7 @@ export NVM_DIR="$HOME/.nvm"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+source /etc/profile.d/vte.sh
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
