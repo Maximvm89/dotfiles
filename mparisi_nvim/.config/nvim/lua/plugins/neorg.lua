@@ -19,8 +19,7 @@ return {
 							icon_preset = "diamond",
 							icons = {
 								code_block = {
-									conceal = false,
-									content_only = false,
+									conceal = true,
 								},
 							},
 						},
