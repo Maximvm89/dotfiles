@@ -39,6 +39,7 @@ alias sshvfxel7="ssh sys2261.ldn.vfx -t bash"
 alias dev="module load job-fscfc;source /net/code/workspaces/mparisi/git/dev.sh"
 alias asu="analyseSoftwareUse"
 alias sshshared="ssh sys-vm0065.ldn"
+alias sshsharedMTL="ssh sys864.mtl.vfx"
 alias devel="module load /net/sw/global/show/usesDefaultOsTools-fc/pythonessentials-devel/latest/modules/pythonessentials-devel/3.10"
 alias pyright="source /net/code/workspaces/mparisi/envdev/python/bin/activate"
 
