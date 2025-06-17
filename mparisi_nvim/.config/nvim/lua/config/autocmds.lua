@@ -125,8 +125,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-
+vim.opt.conceallevel=2
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-  pattern = {"*.norg"},
+  pattern = {"*.norg" },
   command = "set conceallevel=3"
 })
