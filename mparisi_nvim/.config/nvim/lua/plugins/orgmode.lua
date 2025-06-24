@@ -19,6 +19,20 @@ return {
 			--   ensure_installed = 'all',
 			--   ignore_install = { 'org' },
 			-- })
+			require("blink.cmp").setup({
+				sources = {
+					per_filetype = {
+						org = { "orgmode" },
+					},
+					providers = {
+						orgmode = {
+							name = "Orgmode",
+							module = "orgmode.org.autocompletion.blink",
+							fallbacks = { "buffer" },
+						},
+					},
+				},
+			})
 		end,
 	},
 	{
