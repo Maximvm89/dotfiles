@@ -3,6 +3,7 @@ return {
 		"nvim-orgmode/orgmode",
 		event = "VeryLazy",
 		dev = PL_DEV,
+		enabled = not PL_DEV,
 		tag = "0.3.7",
 		ft = { "org" },
 		config = function()
@@ -23,6 +24,7 @@ return {
 	{
 		"chipsenkbeil/org-roam.nvim",
 		tag = "0.1.1",
+		enabled = not PL_DEV,
 		dev = PL_DEV,
 		config = function()
 			require("org-roam").setup({
