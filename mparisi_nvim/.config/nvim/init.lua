@@ -58,6 +58,9 @@ end
 
 _G.Config_dir = "~/.config/nvim"
 
+vim.o.conceallevel = 2
+vim.o.concealcursor = "nc"
+
 require("core.lsp")
 require("config.lazy")
 

@@ -1,6 +1,7 @@
 return {
 	"epwalsh/obsidian.nvim",
 	dev = PL_DEV,
+	enabled = false,
 	version = "*", -- recommended, use latest release instead of latest commit
 	lazy = true,
 	ft = "markdown",
@@ -20,6 +21,9 @@ return {
 		-- see below for full list of optional dependencies 👇
 	},
 	opts = {
+		completion = {
+			blink = true
+		},
 		workspaces = {
 			-- {
 			-- 	name = "personal",

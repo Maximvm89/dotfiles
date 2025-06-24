@@ -8,7 +8,7 @@ vim.keymap.set("v", "<leader>cf", function()
 	require("conform").format()
 end, { desc = "Format selection" })
 vim.keymap.set("n", "<leader>d", vim.cmd.Dashboard, { desc = "Dashboard" })
-vim.keymap.set("n", "<leader>n", "<cmd>Noice fzf<cr>", { desc = "Notifications" })
+-- vim.keymap.set("n", "<leader>n", "<cmd>Noice fzf<cr>", { desc = "Notifications" })
 vim.keymap.set("n", "<leader>pf", "<cmd>NeovimProjectDiscover history<cr>", { desc = "Find a project" })
 vim.keymap.set("n", "<leader>ph", "<cmd>NeovimProjectHistory<cr>", { desc = "Select a project from history" })
 require("which-key").add({

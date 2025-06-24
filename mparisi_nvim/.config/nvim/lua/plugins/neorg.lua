@@ -2,6 +2,7 @@ return {
 	{
 		"nvim-neorg/neorg",
 		dev = PL_DEV,
+		enabled = true,
 		lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
 		dependencies = {
 			{ "nvim-neorg/lua-utils.nvim", dev = PL_DEV },
@@ -19,7 +20,7 @@ return {
 							icon_preset = "diamond",
 							icons = {
 								code_block = {
-									conceal = true,
+									conceal = false,
 								},
 							},
 						},
