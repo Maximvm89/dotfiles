@@ -31,10 +31,10 @@ return {
         center = {
           { action = 'lua require("fzf-lua").files()',                                                      desc = " Find File Cwd",	       icon = " ", key = "ff" },
           { action = function() require("fzf-lua").files({cwd = Work_dir}) end,                             desc = " Find Git File",	       icon = " ", key = "fg" },
-          { action = 'e ~/notes/Marco/index.md',                                                                         desc = " New Scratch Note",	       icon = " ", key = "n" },
+	  { action = 'e ~/notes/Work/20250625093519-index.org',                                             desc = " New Scratch Note",	       icon = " ", key = "n" },
           { action = function() require("fzf-lua").files({cwd = "~/notes/Marco"}) end,                      desc = " Find Notes",	       icon = "󰈞 ", key = "fn" },
           { action = function() require("fzf-lua").live_grep({cwd = "~/notes/Marco"}) end,                  desc = " Grep Notes",	       icon = "󰍉  ", key = "gn" },
-          { action = 'lua require("fzf-lua").oldfiles()',                                                   desc = " Old Files",	       icon = " ", key = "r" },
+          { action = 'lua require("fzf-lua").oldfiles()',                                                   desc = " Recent Files",	       icon = " ", key = "r" },
           { action = 'lua require("fzf-lua").live_grep()',                                                  desc = " Grep Cwd",	               icon = " ", key = "gc" },
           { action = function() require("fzf-lua").live_grep({cwd = Work_dir}) end,                         desc = " Grep Git",	               icon = "󱦞 ", key = "gg" },
           { action = function() require("fzf-lua").files({cwd = Config_dir}) end,                           desc = " Config",		       icon = " ", key = "c" },

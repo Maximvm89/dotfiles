@@ -4,7 +4,7 @@ return {
 		enabled = true,
 		dev = _G.PL_DEV,
 		-- optional: provides snippets for the snippet source
-		dependencies = { "rafamadriz/friendly-snippets", dev = PL_DEV },
+		dependencies = { "rafamadriz/friendly-snippets", dev = PL_DEV, enabled = true },
 
 		-- use a release tag to download pre-built binaries
 		version = "*",
@@ -37,13 +37,7 @@ return {
 			},
 
 			-- (Default) Only show the documentation popup when manually triggered
-			completion = {
-				menu = { border = "single" },
-				documentation = {
-					window = { border = "single" },
-					auto_show = false,
-				},
-			},
+			completion = { documentation = { auto_show = false } },
 			signature = {
 				window = { border = "single" },
 				enabled = true,
@@ -52,7 +46,7 @@ return {
 			-- Default list of enabled providers defined so that you can extend it
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			sources = {
-				default = { "path", "lsp", "snippets", "buffer" },
+				default = { "lsp", "path", "snippets", "buffer" },
 			},
 			-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
 			-- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,

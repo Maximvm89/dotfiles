@@ -4,7 +4,7 @@ return {
 		event = "VeryLazy",
 		dev = PL_DEV,
 		enabled = not PL_DEV,
-		tag = "0.3.7",
+		-- tag = "0.3.7",
 		ft = { "org" },
 		config = function()
 			-- Setup orgmode
@@ -12,13 +12,6 @@ return {
 				org_agenda_files = "~/notes/Marco/**/*",
 				org_default_notes_file = "~/notes/Marco/refile.org",
 			})
-
-			-- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
-			-- add ~org~ to ignore_install
-			-- require('nvim-treesitter.configs').setup({
-			--   ensure_installed = 'all',
-			--   ignore_install = { 'org' },
-			-- })
 			require("blink.cmp").setup({
 				sources = {
 					per_filetype = {
@@ -33,6 +26,12 @@ return {
 					},
 				},
 			})
+			-- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
+			-- add ~org~ to ignore_install
+			-- require('nvim-treesitter.configs').setup({
+			--   ensure_installed = 'all',
+			--   ignore_install = { 'org' },
+			-- })
 		end,
 	},
 	{
@@ -47,10 +46,20 @@ return {
 				org_files = {
 					"~/notes/Marco",
 				},
-				bindings = {
-					goto_next_node = "<CR>",
-					goto_prev_node = "<BS>",
-				},
+				-- bindings = {
+				-- 	goto_next_node = "<CR>",
+				-- 	goto_prev_node = "<BS>",
+				-- },
+			})
+		end,
+	},
+	{
+		"akinsho/org-bullets.nvim",
+		enabled = not PL_DEV,
+		dev = PL_DEV,
+		config = function()
+			require("org-bullets").setup({
+				-- concealcursor = true
 			})
 		end,
 	},
