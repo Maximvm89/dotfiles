@@ -77,7 +77,9 @@ vim.o.confirm = true
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldlevel = 99 -- Start with all folds open
 
 -- local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
 

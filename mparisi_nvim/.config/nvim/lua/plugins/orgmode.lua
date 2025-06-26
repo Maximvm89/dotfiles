@@ -11,6 +11,7 @@ return {
 			require("orgmode").setup({
 				org_agenda_files = "~/notes/**/*",
 				org_default_notes_file = "~/notes/refile.org",
+				org_startup_folded = "content",
 				org_todo_keywords = { "TODO", "IN_PROGRESS", "CODE_REVIEW", "|", "DONE", "TECH_PORTAL" },
 				org_todo_keyword_faces = {
 					IN_PROGRESS = ":foreground cyan :weight bold :underline on",
