@@ -3,6 +3,17 @@ local api = vim.api
 -- don't auto comment new line
 api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })
 
+vim.api.nvim_create_autocmd('ColorScheme', {
+  pattern = '*',
+  callback = function()
+    -- Define own colors
+    vim.api.nvim_set_hl(0, '@org.agenda.deadline', { fg = '#F700FE' })
+    vim.api.nvim_set_hl(0, '@org.agenda.scheduled', { fg = '#AAFFAA' })
+    -- Link to another highlight group
+    vim.api.nvim_set_hl(0, '@org.agenda.scheduled_past', { link = 'Statement' })
+  end
+})
+
 if not PL_SITE then
 	vim.api.nvim_create_autocmd("BufEnter", {
 		pattern = "*.py",

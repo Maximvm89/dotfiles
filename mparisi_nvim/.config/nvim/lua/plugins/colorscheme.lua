@@ -2,12 +2,16 @@ return {
 	{
 		"catppuccin/nvim",
 		dev = PL_DEV,
+		lazy = false,
 		name = "catppuccin",
+		dependencies = { "nvim-orgmode/orgmode" , dev=PL_DEV},
 		priority = 1000,
-		-- config = function()
-		-- 	require("catppuccin").setup({})
-		-- 	vim.cmd("colorscheme catppuccin-frappe")
-		-- end,
+		config = function()
+			require("catppuccin").setup({
+				-- your config here
+			})
+			vim.cmd.colorscheme("catppuccin")
+		end,
 	},
 	{
 		"EdenEast/nightfox.nvim",

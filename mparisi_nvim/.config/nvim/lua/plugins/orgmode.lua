@@ -9,8 +9,16 @@ return {
 		config = function()
 			-- Setup orgmode
 			require("orgmode").setup({
-				org_agenda_files = "~/notes/Marco/**/*",
-				org_default_notes_file = "~/notes/Marco/refile.org",
+				org_agenda_files = "~/notes/**/*",
+				org_default_notes_file = "~/notes/refile.org",
+				org_todo_keywords = { "TODO", "IN_PROGRESS", "CODE_REVIEW", "|", "DONE", "TECH_PORTAL" },
+				org_todo_keyword_faces = {
+					IN_PROGRESS = ":foreground cyan :weight bold :underline on",
+					CODE_REVIEW = ":foreground cyan :underline on :slant italic",
+					TECH_PORTAL = ":underline on :weight bold :slant italic"
+				},
+				win_split_mode = "vsplit",
+				win_border = { "double" },
 			})
 			require("blink.cmp").setup({
 				sources = {
@@ -28,10 +36,9 @@ return {
 			})
 			-- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
 			-- add ~org~ to ignore_install
-			-- require('nvim-treesitter.configs').setup({
-			--   ensure_installed = 'all',
-			--   ignore_install = { 'org' },
-			-- })
+			require("nvim-treesitter.configs").setup({
+				ignore_install = { "org" },
+			})
 		end,
 	},
 	{
@@ -41,10 +48,10 @@ return {
 		dev = PL_DEV,
 		config = function()
 			require("org-roam").setup({
-				directory = "~/notes/Marco",
+				directory = "~/notes",
 				-- optional
 				org_files = {
-					"~/notes/Marco",
+					"~/notes",
 				},
 				-- bindings = {
 				-- 	goto_next_node = "<CR>",
