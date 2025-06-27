@@ -37,7 +37,7 @@ alias sshshared="kitten ssh -Y sys-vm0065.ldn"
 alias sshsharedel7="kitten ssh -Y sys-vm0019.ldn"
 alias sshvfxel7="kitten ssh -Y sys2261.ldn.vfx"
 alias sshvfx="kitten ssh -Y sys2240.ldn.vfx"
-alias ananas="ssh 192.168.68.91"
+alias ananas="ssh marco@192.168.68.91"
 setopt inc_append_history
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
