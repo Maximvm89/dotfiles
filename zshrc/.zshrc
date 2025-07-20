@@ -38,6 +38,10 @@ alias sshsharedel7="kitten ssh -Y sys-vm0019.ldn"
 alias sshvfxel7="kitten ssh -Y sys2261.ldn.vfx"
 alias sshvfx="kitten ssh -Y sys2240.ldn.vfx"
 alias ananas="kitten ssh marco@192.168.68.91"
+alias pikvm='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --app="https://192.168.68.61/"'
+alias pcoipSys2240='/Applications/PCoIPClient.app/Contents/MacOS/PCoIPClient -b pcoip-cm-ldn.framestore.com --desktop sys2240.ldn.vfx.framestore.com  --password EcakufefeS92 --username mparisi &'
+alias pcoipSys2261='/Applications/PCoIPClient.app/Contents/MacOS/PCoIPClient -b pcoip-cm-ldn.framestore.com --desktop sys2261.ldn.vfx.framestore.com  --password EcakufefeS92 --username mparisi &'
+alias pcoip="open --new /Applications/PCoIPClient.app"
 setopt inc_append_history
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
