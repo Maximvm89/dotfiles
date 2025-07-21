@@ -4,7 +4,6 @@ return {
 		dev = PL_DEV,
 		lazy = false,
 		name = "catppuccin",
-		dependencies = { "nvim-orgmode/orgmode" , dev=PL_DEV},
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({

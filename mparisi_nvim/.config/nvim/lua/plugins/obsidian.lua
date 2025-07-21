@@ -1,7 +1,7 @@
 return {
 	"epwalsh/obsidian.nvim",
 	dev = PL_DEV,
-	enabled = false,
+	enabled = true,
 	version = "*", -- recommended, use latest release instead of latest commit
 	lazy = true,
 	ft = "markdown",
@@ -24,6 +24,7 @@ return {
 		completion = {
 			blink = true
 		},
+		ui = {enabled = false },
 		workspaces = {
 			-- {
 			-- 	name = "personal",
@@ -31,7 +32,7 @@ return {
 			-- },
 			{
 				name = "work",
-				path = "~/notes/Marco",
+				path = "~/notes",
 			},
 		},
 

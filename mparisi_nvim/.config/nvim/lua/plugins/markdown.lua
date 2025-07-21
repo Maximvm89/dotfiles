@@ -2,6 +2,7 @@ return {
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dev = PL_DEV,
+		enabled = false,
 		dependencies = {
 			{ "nvim-treesitter/nvim-treesitter", dev = PL_DEV },
 			{ "echasnovski/mini.nvim", dev = PL_DEV },
